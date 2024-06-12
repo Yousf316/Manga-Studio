@@ -1,0 +1,17 @@
+#root{
+    margin: 80px 0 20px 10px;
+    text-align: center;
+}
+
+
+#root .htopic{
+    text-align: center;
+    font-size: 2em;
+}
+
+#header1{
+    background-color: blue;
+}
+body{
+margin: 0;
+}

@@ -1,0 +1,21 @@
+.paging-continer{
+    margin-top: 10px;
+   
+    
+    
+}
+.paging-button{
+    font-size: 2.5rem;
+    padding: 5px;
+    border: none;
+    background-color: aqua;
+    border-radius: 10px;
+    margin-right:10px ;
+    cursor: pointer;
+    box-shadow:0px 5px 0px 0px #0000ff33;
+}
+.paging-button:hover{
+    background-color: #00ffff7d;
+    
+    
+}
