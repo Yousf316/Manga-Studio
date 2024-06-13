@@ -6,9 +6,10 @@ function Manga() {
     
     // Correctly placed console.log
     
-
+    console.log(1);
     return (
         <>
+
             <CardInfo mangaid={id} />
         </>
     );
