@@ -9,7 +9,7 @@ function App() {
 
   return(
     <>
-    <BrowserRouter basename='/Manga site/my-react-app/'>
+    <BrowserRouter basename='/Manga-Studio/'>
     <Routes>
       <Route index element={<Home/>}/>
       <Route path="/manga/:id" element={<Manga/>}/>
