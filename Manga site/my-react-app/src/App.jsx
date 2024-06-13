@@ -9,7 +9,7 @@ function App() {
 
   return(
     <>
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename='/Manga site/my-react-app/'>
     <Routes>
       <Route index element={<Home/>}/>
       <Route path="/manga/:id" element={<Manga/>}/>
