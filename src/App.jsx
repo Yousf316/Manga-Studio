@@ -7,7 +7,7 @@ import {RouterProvider,createBrowserRouter,BrowserRouter,Route,Routes} from 'rea
 const router = createBrowserRouter([
   {
     path: "/Manga-Studio/",
-    element: <App />,
+    element: <Home />,
     children: [
       {
         path: "/Manga-Studio/",
