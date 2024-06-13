@@ -9,7 +9,7 @@ function Card({image = Defaultimage,Title ="اسم المانجا" , Link =""})
     return(
 
         <div className={styles['Card-info']  }>
-            <a href={'/manga/'+Link}  ><img className={styles.image }src={image} alt="Managa Picture" /></a>
+            <a href={'/Manga-Studio/manga/'+Link}  ><img className={styles.image }src={image} alt="Managa Picture" /></a>
             <hr className={styles.title} />
             <h2 className={styles.title}> {Title}</h2>
             <hr />

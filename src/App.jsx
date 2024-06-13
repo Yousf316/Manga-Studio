@@ -28,7 +28,7 @@ function App() {
     <BrowserRouter basename='/Manga-Studio/'>
     <Routes>
       <Route index element={<Home/>}/>
-      <Route path="/Manga-Studio/manga/:id" element={<Manga/>}/>
+      <Route path="/manga/:id" element={<Manga/>}/>
     </Routes>
     </BrowserRouter>
     </>
