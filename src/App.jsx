@@ -9,10 +9,7 @@ const router = createBrowserRouter([
     path: "/Manga-Studio/",
     element: <Home />,
     children: [
-      {
-        path: "/Manga-Studio/",
-        element: <Home />,
-      },
+      
       {
         path: "/Manga-Studio/manga/:id",
         element: <Manga/>,
