@@ -2,7 +2,7 @@
 
 import Manga from "./Pages/Manga"
 import Home from "./Pages/Home"
-import {HashRouter,RouterProvider,createBrowserRouter,BrowserRouter,Route,Routes} from 'react-router-dom'
+import {RouterProvider,createBrowserRouter,BrowserRouter,Route,Routes} from 'react-router-dom'
 
 // const router = createBrowserRouter([
 //   {
@@ -25,12 +25,12 @@ function App() {
 
    {/* <RouterProvider router={router} /> */}
 
-    <HashRouter >
-    
+    <BrowserRouter basename='/Manga-Studio/'>
+    <Routes>
       <Route index element={<Home/>}/>
-      <Route path="/manga/:id" element={<Manga/>}/>
-    
-    </HashRouter>
+      <Route path="/Manga-Studio/manga/:id" element={<Manga/>}/>
+    </Routes>
+    </BrowserRouter>
     </>
   )
 
