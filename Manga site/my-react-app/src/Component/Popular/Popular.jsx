@@ -1,6 +1,9 @@
 import  { useState, useEffect ,useRef} from 'react';
 import Card from '../Card/Card';
 import Styles from "./Popular.module.css"
+import { SearchBar } from "../saerch/SearchBar";
+
+
 const baseUrl ="https://api.jikan.moe/v4";
 
 
@@ -13,6 +16,7 @@ function CheckbtnPrevese (pagenumber,btnref)
 function Popular  () {
   const [animeList, setAnimeList] = useState([]);
   const [pagenumber, setpagenumber] = useState(1);
+  
 
   const btnPreves = useRef(null)
 
@@ -20,6 +24,7 @@ function Popular  () {
     const fetchPopularAnime = async () => {
       try {
         const response = await fetch(baseUrl+'/top/manga?type=novel&limit=10&page='+pagenumber);
+        // const response = await fetch(baseUrl+'/manga?q=One&type=novel&limit=10&page='+pagenumber);
         const data = await response.json();
         setAnimeList(data.data);
       } catch (error) {
@@ -29,6 +34,8 @@ function Popular  () {
     CheckbtnPrevese(pagenumber,btnPreves);
     fetchPopularAnime();
   }, [pagenumber]);
+
+
 
  function handleIncrementPageChange()
  {
@@ -43,6 +50,10 @@ function Popular  () {
   return (
     <>
     <div>
+      <div className={Styles['continer-searchbar']}>
+      <SearchBar setResults={setAnimeList} />
+      </div>
+   
        {animeList.map(anime => (
         <Card
           key={anime.mal_id}

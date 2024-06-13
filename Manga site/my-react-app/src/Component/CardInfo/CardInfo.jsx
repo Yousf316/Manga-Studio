@@ -2,7 +2,7 @@ import React ,{useEffect} from "react";
 import styles from './CardInfo.module.css';
 import PropTypes from 'prop-types';
 
- function CardInfo({mangaid=1})
+ function CardInfo({mangaid="1"})
 
 {
    
@@ -34,6 +34,7 @@ import PropTypes from 'prop-types';
         <>
         <div className={styles["details"]}>
                 <div className={styles["detail"]}>
+                    <h2>{title}</h2>
                     <div className="image">
                         <img src={images?.jpg.large_image_url} alt="" />
                     </div>
@@ -51,7 +52,9 @@ import PropTypes from 'prop-types';
                     </div>
                 </div>
                 <p className={styles["description"]}>
+                    
                     {showMore ? synopsis : synopsis?.substring(0, 450) + '...'}
+                    <br />
                     <button onClick={() => {
                         setShowMore(!showMore)
                     }}>{showMore ? 'Show Less': 'Read More'}</button>
@@ -62,6 +65,6 @@ import PropTypes from 'prop-types';
 }
 CardInfo.propTypes ={
    
-    mangaid: PropTypes.number,
+    mangaid: PropTypes.string,
 }
 export default CardInfo

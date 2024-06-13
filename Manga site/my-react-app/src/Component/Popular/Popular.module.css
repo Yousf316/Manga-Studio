@@ -19,3 +19,12 @@
     
     
 }
+
+.continer-searchbar
+{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    margin-top: 99px;
+    margin-bottom: 10px;
+}
