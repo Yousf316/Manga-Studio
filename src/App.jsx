@@ -2,19 +2,38 @@
 
 import Manga from "./Pages/Manga"
 import Home from "./Pages/Home"
-import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import {RouterProvider,createBrowserRouter,BrowserRouter,Route,Routes} from 'react-router-dom'
 
+const router = createBrowserRouter([
+  {
+    path: "/Manga-Studio/",
+    element: <App />,
+    children: [
+      {
+        path: "/Manga-Studio/",
+        element: <Home />,
+      },
+      {
+        path: "/Manga-Studio/manga/:id",
+        element: <Manga/>,
+      },
+    ],
+  },
+]);
 
 function App() {
 
   return(
     <>
-    <BrowserRouter basename='/Manga-Studio/'>
+
+   <RouterProvider router={router} />
+
+    {/* <BrowserRouter basename='/Manga-Studio/'>
     <Routes>
       <Route index element={<Home/>}/>
       <Route path="/Manga-Studio/manga/:id" element={<Manga/>}/>
     </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
     </>
   )
 
