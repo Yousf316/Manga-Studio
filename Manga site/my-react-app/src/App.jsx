@@ -9,7 +9,7 @@ function App() {
 
   return(
     <>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
     <Routes>
       <Route index element={<Home/>}/>
       <Route path="/manga/:id" element={<Manga/>}/>
