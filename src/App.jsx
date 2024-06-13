@@ -25,7 +25,7 @@ function App() {
 
    {/* <RouterProvider router={router} /> */}
 
-    <HashRouter basename='/Manga-Studio/'>
+    <HashRouter >
     
       <Route index element={<Home/>}/>
       <Route path="/manga/:id" element={<Manga/>}/>
