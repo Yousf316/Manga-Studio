@@ -44,10 +44,10 @@ export default function Header() {
       >
         <nav className="Nav">
         
-          <a href="/Manga-Studio/">قائمة التصانيف</a>
+          <a href="/Manga-Studio/0">قائمة المانجا</a>
+          <a href="/Manga-Studio/1">قائمة الروايات</a>
           <a href="/Manga-Studio/">الصفحة الرئيسية</a>
           
-          <button>الخروج</button>
         </nav>
       </CSSTransition>
       <button onClick={toggleNav} className="Burger">

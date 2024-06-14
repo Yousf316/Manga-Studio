@@ -1,20 +1,17 @@
 
 import  { useState, useEffect } from "react";
 
-import Card from "../Component/Card/Card"
 import Popular from "../Component/Popular/Popular"
+import { useParams } from "react-router-dom";
 
-function getImageurl(name)
-{
-  return new URL(`../assets/Pictures/>${name}`,import.meta.url).href
-}
+
 
 export default function Home(){
- 
+  const { id } = useParams();
     return(
         <>
         
-       <Popular/>
+       <Popular isNovel={id}/>
       
         </>
     )

@@ -13,7 +13,7 @@ function CheckbtnPrevese (pagenumber,btnref)
   pagenumber >1? btnref.current.style.backgroundColor = "":btnref.current.style.backgroundColor = "#bdbdbdb2" ;
 }
 
-function Popular  () {
+function Popular  ({isNovel="1"}) {
   const [animeList, setAnimeList] = useState([]);
   const [pagenumber, setpagenumber] = useState(1);
   
@@ -23,8 +23,12 @@ function Popular  () {
   useEffect(() => {
     const fetchPopularAnime = async () => {
       try {
-        const response = await fetch(baseUrl+'/top/manga?type=novel&limit=10&page='+pagenumber);
-        // const response = await fetch(baseUrl+'/manga?q=One&type=novel&limit=10&page='+pagenumber);
+        let response;
+        if(isNovel ==="1")
+         response = await fetch(baseUrl+'/top/manga?type=novel&limit=10&page='+pagenumber);
+        else
+        response = await fetch(baseUrl+'/top/manga?l&limit=10&page='+pagenumber);
+      
         const data = await response.json();
         setAnimeList(data.data);
       } catch (error) {

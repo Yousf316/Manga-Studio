@@ -9,13 +9,14 @@
     grid-template-areas: "logo nav";
   
     /* Cosmetics */
-    background-color: #363535;
+    background-color: #5269bd;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
   
   .Logo {
     grid-area: logo;
     height: 70px;
+    cursor: pointer;
   }
   
   .Nav {
@@ -35,7 +36,7 @@
   .Nav a:hover {
     transform: scale(1.1);
   }
-  .Nav button {
+  /* .Nav button {
     padding: 10px;
     outline: none;
     border: none;
@@ -52,7 +53,7 @@
   .Nav button:active {
     transform: translateY(3px);
     box-shadow: 0px 2px 0px 0px rgba(255, 0, 0, 0.25);
-  }
+  } */
   
   .Burger {
 
