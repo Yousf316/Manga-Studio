@@ -34,7 +34,7 @@ export default function Header() {
     <>
     <header className="Header">
       <img src={logo} className="Logo" alt="logo" onClick={ () =>{
-    window.location.href = '/'
+    window.location.href = '/Manga-Studio/'
 }} />
       <CSSTransition
         in={!isSmallScreen || isNavVisible}
@@ -44,8 +44,8 @@ export default function Header() {
       >
         <nav className="Nav">
         
-          <a href="/">قائمة التصانيف</a>
-          <a href="/">الصفحة الرئيسية</a>
+          <a href="/Manga-Studio/">قائمة التصانيف</a>
+          <a href="/Manga-Studio/">الصفحة الرئيسية</a>
           
           <button>الخروج</button>
         </nav>
